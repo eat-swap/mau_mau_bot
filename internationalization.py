@@ -133,7 +133,7 @@ def game_locales(func):
                 if us and us.lang != 'en':
                     loc = us.lang
                 else:
-                    loc = 'en_US'
+                    loc = 'zh_CN'
 
                 if loc in locales:
                     continue
