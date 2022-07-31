@@ -375,7 +375,7 @@ def start_game(bot, update, args, job_queue):
 
             for player in game.players:
                 player.draw_first_hand()
-            choice = [[InlineKeyboardButton(text=_("Make your choice!"), switch_inline_query_current_chat='')]]
+            choice = [[InlineKeyboardButton(text=_("点我选择！"), switch_inline_query_current_chat='')]]
             first_message = (
                 __("First player: {name}\n"
                    "Use /close to stop people from joining the game.\n"
@@ -698,7 +698,7 @@ def process_result(bot, update, job_queue):
         nextplayer_message = (
             __("Next player: {name}", multi=game.translate)
             .format(name=display_name(game.current_player.user)))
-        choice = [[InlineKeyboardButton(text=_("Make your choice!"), switch_inline_query_current_chat='')]]
+        choice = [[InlineKeyboardButton(text=_("点我选择！"), switch_inline_query_current_chat='')]]
         send_async(bot, chat.id,
                         text=nextplayer_message,
                         reply_markup=InlineKeyboardMarkup(choice))
