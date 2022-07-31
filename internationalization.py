@@ -41,7 +41,7 @@ class _Underscore(object):
             )
             for locale
             in available_locales.keys()
-            if locale != 'zh_CN'  # No translation file for en_US
+            if locale != 'en_US'  # No translation file for en_US
         }
         self.locale_stack = list()
 
@@ -110,7 +110,7 @@ def user_locale(func):
         if us and us.lang != 'en':
             _.push(us.lang)
         else:
-            _.push('en_US')
+            _.push('zh_CN')
 
         result = func(bot, update, *pargs, **kwargs)
         _.pop()
