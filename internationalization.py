@@ -62,8 +62,7 @@ class _Underscore(object):
             return None
 
     def __call__(self, singular, plural=None, n=1, locale=None):
-        if not locale:
-            locale = self.locale_stack[-1]
+        locale = 'zh_CN'
 
         if locale not in self.translators.keys():
             if n is 1:
