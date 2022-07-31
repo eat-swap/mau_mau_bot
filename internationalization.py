@@ -86,7 +86,7 @@ def __(singular, plural=None, n=1, multi=False):
     translations = list()
 
     if not multi and len(set(_.locale_stack)) >= 1:
-        translations.append(_(singular, plural, n, 'en_US'))
+        translations.append(_(singular, plural, n, 'zh_CN'))
 
     else:
         for locale in _.locale_stack:
