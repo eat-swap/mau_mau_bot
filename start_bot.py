@@ -22,4 +22,10 @@
 
 
 def start_bot(updater):
-    updater.start_polling()
+    # updater.start_polling()
+    updater.start_webhook(
+        listen="127.255.254.3",
+        port=65500,
+        url_path="",
+        webhook_url=""
+    )
